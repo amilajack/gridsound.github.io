@@ -1,0 +1,148 @@
+/* ------------------------------------------- */
+
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font: 14px sans-serif;
+	color: #ddd;
+	background: url( "noise-light.png" ) #555;
+}
+a {
+	outline: 0;
+	text-decoration: none;
+}
+h2 {
+	display: inline-block;
+	margin: 0;
+	font-size: 24px;
+	padding-bottom: .25em;
+	border-bottom: 3px solid #9595c8;
+}
+abbr {
+	cursor: help;
+	text-decoration: none;
+}
+p {
+	text-indent: .6em;
+	line-height: 1.4em;
+}
+section + section {
+	margin-top: 50px;
+}
+
+/* ------------------------------------------- */
+
+a.inline {
+	color: #9595c8;
+	transition: color .2s;
+}
+a.inline:hover {
+	text-decoration: underline;
+	color: #a095d0;
+}
+.btn {
+	display: inline-block;
+	color: #fff;
+	font-weight: bold;
+	padding: .6em .8em;
+	border-radius: 4px;
+	text-shadow: 0 1px 0 #222;
+	border: 0 solid #006030;
+	border-bottom-width: 3px;
+	background: #009b54;
+	transition: all .03s;
+}
+.btn:hover {
+	background: #00ab64;
+	border-color: #007040;
+}
+.btn:active {
+	text-shadow: 0 -1px 0 #222;
+	border: 0;
+	margin-top: 3px;
+}
+
+#global {
+	max-width: 700px;
+	margin: auto;
+	min-height: 100%;
+	border: 0 solid #1a1a1a;
+	border-width: 0 3px;
+	background: url( "noise-dark.png" ) #333;
+	transition: max-width .2s;
+}
+
+header {
+	position: relative;
+	height: 325px;
+	border-bottom: 2px dashed;
+	border-color: inherit;
+	background-color: inherit;
+	transition: height .2s;
+}
+
+header .background {
+	height: 100%;
+	background: #222;
+	background: url( "screenshot.jpg" ) no-repeat;
+	background-size: 100%;
+	opacity: .2;
+}
+
+.logo {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 250px;
+	margin: -125px 0 0 -125px;
+	border-radius: 50%;
+	box-shadow: 0 0 50px rgba( 255, 255, 255, .3 );
+	transition: .2s;
+	transition-property: width, margin;
+}
+
+#content {
+	padding: 20px;
+}
+
+.screenshots {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.screenshots img {
+	width: 150px;
+	border: 2px solid;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+
+.screenshots a + a {
+	margin-left: 10px;
+}
+
+.btn-wrapper {
+	text-align: center;
+}
+
+/* ------------------------------------------- */
+/* Responsive */
+
+@media screen and ( max-width: 900px ) {
+	#global {
+		max-width: 100%;
+		border-width: 0;
+	}
+}
+
+@media screen and ( max-width: 600px ) {
+	header {
+		height: 225px;
+	}
+	.logo {
+		width: 160px;
+		margin: -80px 0 0 -80px;
+	}
+}

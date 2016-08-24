@@ -49,8 +49,6 @@ a.inline:hover {
 	padding: .6em .8em;
 	border-radius: 4px;
 	text-shadow: 0 1px 0 #222;
-	border: 0 solid #006030;
-	border-bottom-width: 3px;
 	background: #009b54;
 	transition: all .03s;
 }
@@ -59,9 +57,8 @@ a.inline:hover {
 	border-color: #007040;
 }
 .btn:active {
-	text-shadow: 0 -1px 0 #222;
-	border: 0;
-	margin-top: 3px;
+	padding-top: .8em;
+	padding-bottom: .4em;
 }
 
 #global {

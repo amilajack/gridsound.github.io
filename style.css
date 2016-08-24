@@ -88,18 +88,6 @@ header .background {
 	opacity: .2;
 }
 
-.logo {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 250px;
-	margin: -125px 0 0 -125px;
-	border-radius: 50%;
-	box-shadow: 0 0 50px rgba( 255, 255, 255, .3 );
-	transition: .2s;
-	transition-property: width, margin;
-}
-
 #content {
 	padding: 20px;
 }
@@ -124,6 +112,34 @@ header .background {
 	text-align: center;
 }
 
+#logo-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 250px;
+	margin: -125px 0 0 -125px;
+	transition: .2s;
+	transition-property: width, height, margin;
+}
+
+#logo {
+	position: absolute;
+	border-radius: 50%;
+	animation: animShadow 2.1s infinite ease;
+}
+
+/* This animation is trying to imitate a heart beating */
+@keyframes animShadow {
+	  0% { width: 100%; left: 0;  top: 0;  opacity: 1;  box-shadow: 0 0 85px rgba( 170, 170, 255, .4  ); }
+	  4% { width: 100%; left: 0;  top: 0;  opacity: 1;  box-shadow: 0 0 85px rgba( 170, 170, 255, .4  ); }
+	 10% { width:  96%; left: 2%; top: 2%; opacity: .7; box-shadow: 0 0 50px rgba( 170, 170, 255, .2  ); }
+	 14% { width:  98%; left: 1%; top: 1%; opacity: 1;  box-shadow: 0 0 70px rgba( 170, 170, 255, .27 ); }
+	 18% { width:  98%; left: 1%; top: 1%; opacity: 1;  box-shadow: 0 0 70px rgba( 170, 170, 255, .27 ); }
+	 21% { width:  96%; left: 2%; top: 2%; opacity: .7; box-shadow: 0 0 60px rgba( 170, 170, 255, .25 ); }
+	100% { width:  96%; left: 2%; top: 2%; opacity: .5; box-shadow: 0 0 20px rgba( 170, 170, 255, .1  ); }
+}
+
 /* ------------------------------------------- */
 /* Responsive */
 
@@ -138,8 +154,9 @@ header .background {
 	header {
 		height: 225px;
 	}
-	.logo {
+	#logo-wrapper {
 		width: 160px;
+		height: 160px;
 		margin: -80px 0 0 -80px;
 	}
 }

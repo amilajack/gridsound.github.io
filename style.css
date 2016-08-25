@@ -31,6 +31,9 @@ p {
 section + section {
 	margin-top: 50px;
 }
+.fa {
+	text-indent: 0;
+}
 
 /* ------------------------------------------- */
 
